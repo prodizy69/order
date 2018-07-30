@@ -1,0 +1,325 @@
+<!-- <div class="cart-container">
+
+  <app-filters [durationTypes]="durationTypeOptions" (filter)="filter($event)"></app-filters>
+  <div *ngIf="!orderHistoryResponse?.orderList?.order.length">No Records</div>
+  <div class="item-container" *ngIf="orderHistoryResponse?.orderList?.order.length">
+    <div [ngClass]="{'item': order.orderCode !== 'Prescription', 'item-rx': order.orderCode === 'Prescription'}" *ngFor=" let order of orderHistoryResponse?.orderList?.order">
+      <div [ngClass]="{'header': order.orderCode !== 'Prescription', 'header-rx': order.orderCode === 'Prescription'}">
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">{{order.orderDate}}</span>
+        </div>
+        <div>
+          <span class="block label">Order #:</span>
+          <span class="block value">{{order.orderIdentifier.identificationIdentifier}}</span>
+        </div>
+        <div>
+          <span class="block label">Total:</span>
+          <span class="block value">${{order.orderTotalAmount }}</span>
+        </div>
+        <span class="order-details">
+          <a href="#" *ngIf="order.orderCode == 'Non Pharmacy' || order.orderCode == 'Non Prescription'" (click)="orderLink(order.orderIdentifier.identificationIdentifier, order.source); $event.preventDefault()">Order details &#x261E;</a>
+        </span>
+      </div>
+      <div class="body">
+        <ng-container *ngIf="order.orderCode !== 'Prescription'">
+        <div class="product-block inline-block" *ngFor="let details of order.details">
+          <div class="image">
+            <img src="{{details.itemImageUrl}}" alt="" width="100px" height="100px">
+          </div>
+          <div>{{details.brand}}</div>
+        </div>
+        </ng-container>
+        <ng-container *ngIf="order.orderCode === 'Prescription'">
+        <div class="product-block inline-block" >
+          <div class="image">
+          </div>
+          <div>Prescription Order</div>
+        </div>
+        </ng-container>
+        <div class="delivery-block inline-block">
+          <div *ngIf="order.orderStatusDescription === 'Order Placed'">
+            Delivery date will be available once your order ships.
+          </div>
+          <div *ngIf="order.orderStatusDescription === 'Delivered' && order.orderCode !== 'Prescription'">
+            Delivered
+          </div>
+          <div *ngIf="order.orderCode === 'Prescription'">
+          </div>
+          <div class="steps-container" *ngIf="order.orderStatusDescription !== 'Cancelled' && order.orderCode !== 'Prescription'">
+            <div class="steps">
+              <ul>
+                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Order Placed' || order.orderStatusDescription === 'Delivered'}">Order Placed</li>
+                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered'}">Shipped</li>
+                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Delivered'}">Delivered</li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-tracking" *ngIf="order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered'">
+            Track Package
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> -->
+<div class="cart-container">
+  <app-filters [durationTypes]="durationTypes" (filter)="filter($event)"></app-filters>
+  <div class="item-container" *ngFor=" let order of orderHistoryResponse?.orderList?.order">
+    <div class="item">
+      <div class="header">
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">{{order.orderDate}}</span>
+        </div>
+        <div>
+          <span class="block label">Order Id:</span>
+          <span class="block value">{{order.orderIdentifier.identificationIdentifier}}</span>
+        </div>
+        <div>
+          <span class="block label">Total: </span>
+          <span class="block value">${{order.orderTotalAmount }}</span>
+        </div>
+        <span class="order-details">Order details &#x261E;</span>
+      </div>
+      <div class="body">
+        <ng-container *ngIf="order.orderCode !== 'Prescription'">
+          <div class="product-block inline-block" *ngFor="let details of order.details">
+            <div class="image">
+              <img src="{{details.itemImageUrl}}" alt="" width="100px" height="100px">
+            </div>
+            <div>{{details.brand}}</div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="order.orderCode === 'Prescription'">
+          <div class="product-block inline-block">
+            <div class="image">
+            </div>
+            <div>Prescription Order</div>
+          </div>
+        </ng-container>
+        <div class="delivery-block inline-block">
+          <div *ngIf="order.orderStatusDescription === 'Order Placed'">
+            Delivery date will be available once your order ships.
+          </div>
+          <div *ngIf="order.orderStatusDescription === 'Delivered' && order.orderCode !== 'Prescription'">
+            Delivered
+          </div>
+          <div *ngIf="order.orderCode === 'Prescription'">
+          </div>
+          <div class="steps-container" *ngIf="order.orderStatusDescription !== 'Cancelled' && order.orderCode !== 'Prescription'">
+            <div class="steps">
+              <ul>
+                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Order Placed' || order.orderStatusDescription === 'Delivered'}">Order Placed</li>
+                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered'}">Shipped</li>
+                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Delivered'}">Delivered</li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-tracking" *ngIf="order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered'">
+            Track Package
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="item-container">
+    <div class="item">
+      <div class="header">
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <span class="order-details">Order details &#x261E;</span>
+      </div>
+      <div class="body">
+        <div class="product-block">
+          <div class="image">
+            <img src="soap.jpg" alt="" width="100px" height="100px">
+          </div>
+          <div>Lorem ipsum dolor sit, odio consectetur blanditiis maxime ipsum! Quasi, molestias!</div>
+        </div>
+        <div class="delivery-block">
+          <div>
+            <b>Estimated Delivery date: Apr 21, 2018</b>
+          </div>
+          <div class="steps-container">
+            <div class="steps">
+              <ul>
+                <li class="list">1</li>
+                <li class="list active">2</li>
+                <li class="list">3</li>
+                <li class="list">4</li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-tracking">
+            Track Package
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item-container">
+    <div class="item prescription">
+      <div class="header">
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <span class="order-details">Order details &#x261E;</span>
+      </div>
+      <div class="body">
+        <div class="product-block">
+          <div>
+            <b>Prescription Order</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item-container">
+    <div class="item">
+      <div class="header">
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <span class="order-details">Order details &#x261E;</span>
+      </div>
+      <div class="body">
+        <div class="product-block">
+          <div class="image">
+            <img src="soap.jpg" alt="" width="100px" height="100px">
+          </div>
+          <div>
+            <b>Monthly Car pass Subscription</b>
+            <br>
+            <a class="red-text clickable">Enjoy Car pass</a>
+          </div>
+        </div>
+        <div class="delivery-block">
+          <div class="subscribed">
+            <b>Subscribed</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item-container">
+    <div class="item">
+      <div class="header">
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <div>
+          <span class="block label">Order Date:</span>
+          <span class="block value">May 18, 2018</span>
+        </div>
+        <span class="order-details">Order details &#x261E;</span>
+      </div>
+      <div class="body">
+        <div class="disp-table">
+          <div class="product-block">
+            <div class="image">
+              <b>Shipment 1</b>
+              <img src="soap.jpg" alt="" width="100px" height="100px">
+            </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus molestiae</div>
+          </div>
+          <div class="delivery-block valign-top">
+            <div class="subscribed">
+              <b>Delivered</b>
+            </div>
+            <div class="order-tracking">
+              Track Package
+            </div>
+          </div>
+        </div>
+        <div class="disp-table">
+          <div class="product-block">
+            <div class="image">
+              <img src="soap.jpg" alt="" width="100px" height="100px">
+            </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus molestiae</div>
+          </div>
+        </div>
+        <div class="disp-table">
+          <div class="product-block border-top">
+            <div class="image">
+              <br>
+              <b>Shipment 2</b>
+              <img src="soap.jpg" alt="" width="100px" height="100px">
+            </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus molestiae</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="pagination">
+    <select>
+      <option>10</option>
+      <option>20</option>
+    </select>
+    <ul class="pagination">
+      <li>
+        <a href="#">«</a>
+      </li>
+      <li>
+        <a href="#">1</a>
+      </li>
+      <li>
+        <a class="active" href="#">2</a>
+      </li>
+      <li>
+        <a href="#">3</a>
+      </li>
+      <li>
+        <a href="#">4</a>
+      </li>
+      <li>
+        <a href="#">5</a>
+      </li>
+      <li>
+        <a href="#">6</a>
+      </li>
+      <li>
+        <a href="#">7</a>
+      </li>
+      <li>
+        <a href="#">»</a>
+      </li>
+    </ul>
+  </div>
+</div>

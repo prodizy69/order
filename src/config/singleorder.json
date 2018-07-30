@@ -1,0 +1,139 @@
+{
+  "responseMap": {
+    "details": {
+      "shipToHomeItemInfo": {
+        "items": [
+          {
+            "rewardProgress": "N",
+            "weight": "0.07LBS",
+            "itemSurchargeAmount": 0.0,
+            "fsaEligibleFlag": "0",
+            "freeShippingFlag": 1,
+            "isArApplied": "0",
+            "webOnlyFlag": "0",
+            "itemRemoved": "0",
+            "itemTotal": 17.59,
+            "salePrice": 21.99,
+            "selectedShipSaveOption": "",
+            "offer": "20% off sitewide",
+            "detailedUnitPrice": "21.99",
+            "size": "20.00TB",
+            "upcNumber": "4110080657",
+            "listPrice": 21.99,
+            "skuId": "465459",
+            "reviewEligibility": "0",
+            "itemImageUrl": "",
+            "seoSlug": "",
+            "brand": "Medical equipment",
+            "quantity": 1,
+            "shipTrackNbr": "",
+            "shipHazardFlag": "0",
+            "savingsApplied": "Y",
+            "itemSavings": {
+              "savings": "4.4"
+            }
+          }
+        ]
+      },
+      "personalInfo": {
+        "lastName": "Kumar",
+        "addr1": "",
+        "phoneNumber": "401-454-5545",
+        "addr2": "",
+        "zipCode": "",
+        "state": "",
+        "preferredContactMethod": "EMAIL",
+        "firstName": "Jitender",
+        "city": ""
+      },
+      "orderPriceSummary": {
+        "ecrewardsAmount": 0.0,
+        "total": 24.7,
+        "shippingAmount": 5.49,
+        "appeasementAmount": 0.0,
+        "taxAmount": 1.62,
+        "subTotal": 17.59,
+        "fsaeligibleamount": 0.0,
+        "employeeDiscountAmount": 0.0
+      },
+      "state": "In process",
+      "billingInfo": {
+        "cards": [
+          {
+            "paymentInfo": {
+              "paymentAmount": 24.7,
+              "paymentType": "Credit Card",
+              "last4Digits": "0003",
+              "creditCardType": "MasterCard",
+              "expirationMonth": "12",
+              "expirationYear": "2019"
+            },
+            "billingAddress": {
+              "lastName": "Kumar",
+              "addr1": "9 Portland street",
+              "addr2": "",
+              "zipCode": "02838",
+              "state": "RI",
+              "firstName": "JItender",
+              "city": "Manville"
+            }
+          }
+        ]
+      },
+      "externalId": "441130267",
+      "shippingInfo": {
+        "storeAddress": {
+          "lastName": "",
+          "selectedStoreInfo": {
+            "storeState": "",
+            "storeZip": "",
+            "storeAddress1": "",
+            "storeCity": "",
+            "storeId": ""
+          },
+          "phoneNumber": "",
+          "pickUpLocation": "",
+          "receiveSmsFlag": "N",
+          "emailAddress": "",
+          "firstName": ""
+        },
+        "shippingMethod": {
+          "shipDesc": ""
+        },
+        "shippingAddress": {
+          "lastName": "Kumar",
+          "addr1": "9 Portland street",
+          "phoneNumber": "401-646-6464",
+          "addr2": "",
+          "email": "jitender.verma@cvshealth.com",
+          "zipCode": "02838",
+          "state": "RI",
+          "firstName": "Jitender",
+          "city": "Manville"
+        }
+      },
+      "statusMessage": "Success",
+      "statusCode": "00",
+      "shipToStoreItemInfo": {
+        "items": []
+      },
+      "submittedDate": "01/11/2018",
+      "totalItemCount": 1,
+      "appliedPromotions": {
+        "ecSavingsDollarOffAmnt": 0.0,
+        "totalSavings": 4.4,
+        "discountDetails": [
+          {
+            "desc": "20% off sitewide",
+            "discount": "4.4"
+          }
+        ]
+      },
+      "orderId": "o291937643",
+      "returnItems": {},
+      "ecCouponInfo": {
+        "ecCardNo": "4871017278012"
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "responseMap": {
+      "details": {
+        "shipToHomeItemInfo": {
+          "shipments": [
+            {
+              "trackingDetails": [
+                {
+                  "shipTrackNbr": "1Z308A9X0110671637",
+                  "shipTrackCarrier": "UPS",
+                  "Delivery Date": "",
+                  "Delivery Status": "In Progress or Delivered"
+                },
+                {
+                  "shipTrackNbr": "1Z308A9X0110671638",
+                  "shipTrackCarrier": "UPS",
+                  "Delivery Date": "",
+                  "Delivery Status": "In Progress or Delivered"
+                }
+              ],
+              "items": [
+                {
+                  "rewardProgress": "N",
+                  "weight": "0.54LBS",
+                  "itemSurchargeAmount": 0,
+                  "fsaEligibleFlag": "0",
+                  "freeShippingFlag": 1,
+                  "isArApplied": "0",
+                  "webOnlyFlag": "1",
+                  "itemRemoved": "0",
+                  "itemTotal": 2.34,
+                  "salePrice": 10.49,
+                  "selectedShipSaveOption": "",
+                  "offer": "30% off Online Only",
+                  "detailedUnitPrice": "10.49",
+                  "size": "100.00CT",
+                  "upcNumber": "1650007410",
+                  "listPrice": 10.49,
+                  "skuId": "103770",
+                  "reviewEligibility": "1",
+                  "itemImageUrl": "https://www.gettyimages.ie/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg",
+                  "seoSlug": "",
+                  "brand": "One A Day Women's Adult Multivitamin Tablets, 100CT",
+                  "quantity": 1,
+                  "shipTrackNbr": "1Z308A9X0110671637",
+                  "shipHazardFlag": "0",
+                  "savingsApplied": "Y",
+                  "itemSavings": {
+                    "savings": "8.15"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "personalInfo": {
+          "lastName": "Koritala",
+          "addr1": "116 Mill St",
+          "phoneNumber": "920-562-3868",
+          "addr2": "Apt 103",
+          "zipCode": "02895",
+          "state": "RI",
+          "preferredContactMethod": "EMAIL",
+          "firstName": "Venkata Mukesh",
+          "city": "Woonsocket"
+        },
+        "orderPriceSummary": {
+          "ecrewardsAmount": 0,
+          "total": 2.5,
+          "shippingAmount": 0,
+          "appeasementAmount": 0,
+          "taxAmount": 0.16,
+          "subTotal": 2.34,
+          "fsaeligibleamount": 0,
+          "employeeDiscountAmount": 0
+        },
+        "state": "Shipped",
+        "billingInfo": {
+          "cards": [
+            {
+              "paymentInfo": {
+                "paymentAmount": 2.5,
+                "paymentType": "Credit Card",
+                "last4Digits": "2686",
+                "creditCardType": "Visa",
+                "expirationMonth": "06",
+                "expirationYear": "2019"
+              },
+              "billingAddress": {
+                "lastName": "Koritala",
+                "addr1": "116 Mill St",
+                "addr2": "Apt 103",
+                "zipCode": "02895",
+                "state": "RI",
+                "firstName": "Venkata Mukesh",
+                "city": "Woonsocket"
+              }
+            }
+          ]
+        },
+        "externalId": "136729591",
+        "shippingInfo": {
+          "storeAddress": {
+            "lastName": "",
+            "selectedStoreInfo": {
+              "storeState": "",
+              "storeZip": "",
+              "storeAddress1": "",
+              "storeCity": "",
+              "storeId": ""
+            },
+            "phoneNumber": "",
+            "pickUpLocation": "",
+            "receiveSmsFlag": "N",
+            "emailAddress": "",
+            "firstName": ""
+          },
+          "shippingMethod": {
+            "shipDesc": ""
+          },
+          "shippingAddress": {
+            "lastName": "Koritala",
+            "addr1": "116 Mill St",
+            "phoneNumber": "123-456-7890",
+            "addr2": "",
+            "email": "venkatamukesh@gmail.com",
+            "zipCode": "02895",
+            "state": "RI",
+            "firstName": "Venkata Mukesh",
+            "city": "Woonsocket"
+          }
+        },
+        "statusMessage": "Success",
+        "statusCode": "00",
+        "shipToStoreItemInfo": {
+          "items": []
+        },
+        "submittedDate": "07/09/2018",
+        "totalItemCount": 1,
+        "appliedPromotions": {
+          "ecSavingsDollarOffAmnt": 5,
+          "totalSavings": 13.64,
+          "discountDetails": [
+            {
+              "desc": "30% off Online Only",
+              "discount": "3.15"
+            },
+            {
+              "desc": "Free Shipping",
+              "discount": "5.49"
+            },
+            {
+              "desc": "5.00 Pharmacy and Health ExtraBucks Rewards",
+              "discount": "5.00"
+            }
+          ]
+        },
+        "orderId": "o11750703093",
+        "returnItems": {},
+        "ecCouponInfo": {
+          "ecCardNo": "4763615686224"
+        }
+      }
+    }
+  }
+]

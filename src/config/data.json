@@ -1,0 +1,173 @@
+{
+  "getOrderHistoryListResponse" : {
+    "responseStatus" : {
+      "statusCd" : "00",
+      "statusDesc" : "Success"
+    },
+    "page" : {
+      "pageSize" : 10,
+      "pageNumber" : 1,
+      "isFirstPage" : "Y",
+      "isLastPage" : "Y",
+      "isValidPage" : "Y",
+      "totalNumberOfPages" : 1
+    },
+    "orderList" : {
+      "order" : [ {
+        "orderIdentifier" : {
+          "identificationIdentifier" : "136758529"
+        },
+        "orderStatusDescription" : "Order Placed",
+        "orderDeliveredDate" : "07/13/2018",
+        "CarePass" : "false",
+        "orderDate" : "07/09/2018",
+        "orderCode" : "Non Prescription",
+        "orderDeliveryDescription" : "Ship to Home",
+        "orderTotalAmount" : 9.44,
+        "orderLines" : {
+          "orderLine" : [ {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          }, {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          } ]
+        },
+        "person" : {
+          "partyIdentifier" : {
+            "identificationIdentifier" : "2346217203"
+          }
+        },
+        "originator" : "CVS.COM"
+      },{
+        "orderIdentifier" : {
+          "identificationIdentifier" : "136758529"
+        },
+        "orderStatusDescription" : "Order Placed",
+        "orderDeliveredDate" : "07/13/2018",
+        "CarePass" : "false",
+        "orderDate" : "07/09/2018",
+        "orderCode" : "Non Prescription",
+        "orderDeliveryDescription" : "Ship to Home",
+        "orderTotalAmount" : 9.44,
+        "orderLines" : {
+          "orderLine" : [ {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          }, {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          } ]
+        },
+        "person" : {
+          "partyIdentifier" : {
+            "identificationIdentifier" : "2346217203"
+          }
+        },
+        "originator" : "CVS.COM"
+      },{
+        "orderIdentifier" : {
+          "identificationIdentifier" : "136758529"
+        },
+        "orderStatusDescription" : "Delivered",
+        "orderDeliveredDate" : "07/13/2018",
+        "CarePass" : "false",
+        "orderDate" : "07/09/2018",
+        "orderCode" : "Prescription",
+        "orderDeliveryDescription" : "Ship to Home",
+        "orderTotalAmount" : 9.44,
+        "orderLines" : {
+          "orderLine" : [ {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          }, {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          } ]
+        },
+        "person" : {
+          "partyIdentifier" : {
+            "identificationIdentifier" : "2346217203"
+          }
+        },
+        "originator" : "CVS.COM"
+      }, {
+        "orderIdentifier" : {
+          "identificationIdentifier" : "136729591"
+        },
+        "orderStatusDescription" : "Shipped",
+        "CarePass" : "false",
+        "orderDate" : "07/09/2018",
+        "orderCode" : "Non Prescription",
+        "orderDeliveryDescription" : "Ship to Home",
+        "orderTotalAmount" : 2.5,
+        "orderLines" : {
+          "orderLine" : [ {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          } ]
+        },
+        "person" : {
+          "partyIdentifier" : {
+            "identificationIdentifier" : "2346217203"
+          }
+        },
+        "originator" : "CVS.COM"
+      }, {
+        "orderIdentifier" : {
+          "identificationIdentifier" : "136514295"
+        },
+        "orderStatusDescription" : "Shipped",
+        "CarePass" : "false",
+        "orderDate" : "07/07/2018",
+        "orderCode" : "Non Prescription",
+        "orderDeliveryDescription" : "Ship to Home",
+        "orderTotalAmount" : 12.72,
+        "orderLines" : {
+          "orderLine" : [ {
+            "orderLineStatus" : "3700",
+            "fulfillmentType" : "SHP"
+          } ]
+        },
+        "person" : {
+          "partyIdentifier" : {
+            "identificationIdentifier" : "2346217203"
+          }
+        },
+        "originator" : "CVS.COM"
+      }, {
+        "orderIdentifier" : {
+          "identificationIdentifier" : "136514292"
+        },
+        "orderStatusDescription" : "Cancelled",
+        "CarePass" : "false",
+        "orderDate" : "07/07/2018",
+        "orderCode" : "Non Prescription",
+        "orderDeliveryDescription" : "Ship to Home",
+        "orderTotalAmount" : 0.0,
+        "orderLines" : {
+          "orderLine" : [ {
+            "orderLineStatus" : "9000",
+            "fulfillmentType" : "SHP"
+          }, {
+            "orderLineStatus" : "9000",
+            "fulfillmentType" : "SHP"
+          }, {
+            "orderLineStatus" : "9000",
+            "fulfillmentType" : "SHP"
+          }, {
+            "orderLineStatus" : "9000",
+            "fulfillmentType" : "SHP"
+          } ]
+        },
+        "person" : {
+          "partyIdentifier" : {
+            "identificationIdentifier" : "2346217203"
+          }
+        },
+        "originator" : "CVS.COM"
+      } ],
+      "numberOfOrders" : 4
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<div class="filters-container">
+  <div class="filters-input inline-block">
+    Orders Placed in:
+    <select id="durationRange" [(ngModel)]="durationType" name="durationRange">
+      <option *ngFor="let option of optionsDurationType ">{{option}}</option>
+    </select>
+  </div>
+  <div class="filters inline-block">
+    Filter by:
+    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Active'}" (click)="filtering('Active')">Active
+      <span></span>
+    </div>
+    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Delivered'}" (click)="filtering('Delivered')">Delivered
+      <span></span>
+    </div>
+    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Cancelled'}" (click)="filtering('Cancelled')"> Cancelled
+      <span></span>
+    </div>
+    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Product'}" (click)="filtering('Product')"> Product
+      <span></span>
+    </div>
+    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Rx'}" (click)="filtering('Rx')"> Rx
+      <span></span>
+    </div>
+  </div>
+</div>
