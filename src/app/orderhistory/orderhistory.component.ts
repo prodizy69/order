@@ -35,13 +35,15 @@ export class OrderhistoryComponent implements OnInit {
             // }
           });
           this.filter('Active');
+          this.orderHistoryResponse.orderList.order = this.originalObj.orderList.order.slice(0, 10);
         });
       });
     });
   }
 
   ngOnInit() {
-    // this.filter('Active');
+
+
   }
   filter(type) {
     this.orderType = type;
@@ -79,6 +81,8 @@ export class OrderhistoryComponent implements OnInit {
 
   goToPage(i) {
     this.pageNumber = i;
+    const count = this.itemsPerPageCount * i;
+    this.orderHistoryResponse.orderList.order = this.originalObj.orderList.order.slice(count, (count + this.itemsPerPageCount));
   }
 
   getNumber(num) {
@@ -90,4 +94,15 @@ export class OrderhistoryComponent implements OnInit {
     return new Array(Math.ceil(this.numberOfPages / this.itemsPerPageCount));
   }
 
+  displayData(event) {
+    if ( event.currentPage) {
+      this.goToPage(event.currentPage);
+    } else {
+      this.itemsPerPageCount = event.size;
+      if (this.orderHistoryResponse && this.orderHistoryResponse.orderList && this.orderHistoryResponse.orderList.order) {
+        this.orderHistoryResponse.orderList.order = this.originalObj.orderList.order.slice(0, event.size);
+      }
+
+    }
+  }
 }

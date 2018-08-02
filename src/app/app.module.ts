@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 import { FiltersComponent } from './filters/filters.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderhistoryComponent,
-    FiltersComponent
+    FiltersComponent,
+    PaginationComponent
 ],
   imports: [
     BrowserModule,

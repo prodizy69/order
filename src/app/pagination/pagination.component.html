@@ -1,0 +1,18 @@
+<div class="pagination">
+  <select [(ngModel)]="pageSize" (ngModelChange)="reArrange()">
+    <option>10</option>
+    <option>20</option>
+  </select>
+  <ul class="pagination">
+    <li>
+      <a (click)="left()" *ngIf="currentPage > 1" class="clickable">«</a>
+    </li>
+    <li *ngFor="let i of pagination; let ind = index;" [class.active]="currentPage === ind + 1" class="clickable">
+      <a (click)="goToPage(ind)" [class.active]="currentPage === ind + 1">{{ind +1 }}</a>
+    </li>
+
+    <li *ngIf="currentPage !== noOfPages" class="clickable">
+      <a (click)="right()" [class.active]="currentPage === ind + 1">»</a>
+    </li>
+  </ul>
+</div>
