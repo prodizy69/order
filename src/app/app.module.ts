@@ -1,3 +1,4 @@
+import { HttpService } from './services/http.service';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,7 @@ import { AppComponent } from './app.component';
 import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 import { FiltersComponent } from './filters/filters.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { ApiService } from './services/api.service';
 
 
 @NgModule({
@@ -16,7 +18,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     OrderhistoryComponent,
     FiltersComponent,
     PaginationComponent
-],
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,7 +26,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService, HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

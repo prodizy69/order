@@ -1,128 +1,121 @@
-<!-- <div class="cart-container">
-
-  <app-filters [durationTypes]="durationTypeOptions" (filter)="filter($event)"></app-filters>
-  <div *ngIf="!orderHistoryResponse?.orderList?.order.length">No Records</div>
-  <div class="item-container" *ngIf="orderHistoryResponse?.orderList?.order.length">
-    <div [ngClass]="{'item': order.orderCode !== 'Prescription', 'item-rx': order.orderCode === 'Prescription'}" *ngFor=" let order of orderHistoryResponse?.orderList?.order">
-      <div [ngClass]="{'header': order.orderCode !== 'Prescription', 'header-rx': order.orderCode === 'Prescription'}">
-        <div>
-          <span class="block label">Order Date:</span>
-          <span class="block value">{{order.orderDate}}</span>
+?<div class="order-status-history-wrapper container">
+  <div class="os-history-header">
+    <div class="os-history-desc">
+      <h5>Order History</h5>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+        dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book.
+      </p>
+    </div>
+    <app-filters [durationTypes]="durationTypes" (filter)="filter($event)"></app-filters>
+  </div>
+  <!-- <div *ngIf="orderHistoryResponse?.orderList?.order?.length"> -->
+  <div class="card order-card os-history-details mb-3" [ngClass]="{'order-card': order?.orderCode !== 'Prescription', 'prescription-order': order?.orderCode === 'Prescription'}"
+    *ngFor="let order of orderHistoryResponse?.orderList?.order">
+    <div class="card-header" [ngClass]="{'prescription-order-active': order?.orderCode === 'Prescription'}">
+      <div class="row">
+        <div class="card-header-left-content col-sm-7">
+          <div id="prescription-order-strip" *ngIf="order?.orderCode === 'Prescription'"></div>
+          <i class="far fa-trash-alt" *ngIf="order?.orderCode === 'Prescription'"></i>
+          <div class="os-details">
+            <span class="mr-1">Order Date:</span>
+            <span>
+              <strong>{{order?.orderDate}}</strong>
+            </span>
+          </div>
+          <div class="os-details">
+            <span class="mr-1">Order#:</span>
+            <span>
+              <strong>{{order?.orderIdentifier?.identificationIdentifier}}</strong>
+            </span>
+          </div>
+          <div class="os-details">
+            <span class="mr-1">Total:</span>
+            <span>
+              <strong>${{order?.orderTotalAmount }}</strong>
+            </span>
+          </div>
         </div>
-        <div>
-          <span class="block label">Order #:</span>
-          <span class="block value">{{order.orderIdentifier.identificationIdentifier}}</span>
+        <div class="card-header-right-content col-sm-5 hide-xs">Order Details
+          <i class="fas fa-angle-right"></i>
         </div>
-        <div>
-          <span class="block label">Total:</span>
-          <span class="block value">${{order.orderTotalAmount }}</span>
-        </div>
-        <span class="order-details">
-          <a href="#" *ngIf="order.orderCode == 'Non Pharmacy' || order.orderCode == 'Non Prescription'" (click)="orderLink(order.orderIdentifier.identificationIdentifier, order.source); $event.preventDefault()">Order details &#x261E;</a>
-        </span>
       </div>
-      <div class="body">
-        <ng-container *ngIf="order.orderCode !== 'Prescription'">
-        <div class="product-block inline-block" *ngFor="let details of order.details">
-          <div class="image">
-            <img src="{{details.itemImageUrl}}" alt="" width="100px" height="100px">
-          </div>
-          <div>{{details.brand}}</div>
-        </div>
-        </ng-container>
-        <ng-container *ngIf="order.orderCode === 'Prescription'">
-        <div class="product-block inline-block" >
-          <div class="image">
-          </div>
-          <div>Prescription Order</div>
-        </div>
-        </ng-container>
-        <div class="delivery-block inline-block">
-          <div *ngIf="order.orderStatusDescription === 'Order Placed'">
-            Delivery date will be available once your order ships.
-          </div>
-          <div *ngIf="order.orderStatusDescription === 'Delivered' && order.orderCode !== 'Prescription'">
-            Delivered
-          </div>
-          <div *ngIf="order.orderCode === 'Prescription'">
-          </div>
-          <div class="steps-container" *ngIf="order.orderStatusDescription !== 'Cancelled' && order.orderCode !== 'Prescription'">
-            <div class="steps">
-              <ul>
-                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Order Placed' || order.orderStatusDescription === 'Delivered'}">Order Placed</li>
-                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered'}">Shipped</li>
-                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Delivered'}">Delivered</li>
-              </ul>
+    </div>
+    <div class="card-body clear-fix">
+
+      <div class="row">
+        <div class="orders-list-wrapper col-md-6 col-lg-5">
+          <h6>SHIPMENT3</h6>
+          <div class="media orders-list mb-4" *ngFor="let details of order.details">
+            <img class="mr-3" src="{{details.itemImageUrl}}" alt="Generic placeholder image">
+            <div class="media-body">
+              {{details.brand}}
             </div>
           </div>
-          <div class="order-tracking" *ngIf="order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered'">
-            Track Package
-          </div>
+        </div>
+        <div class="orders-track-info col-md-6 col-lg-5 offset-lg-2">
+          <div class="pb-4">Delivery date will be availabela once your items ship</div>
+          <ul class="progtrckr" data-progtrckr-steps="5">
+            <li class="progtrckr-done ">
+              <span>Order Placed</span>
+            </li>
+            <li class="progtrckr-done active track-order-btn">
+              <span>Shipped</span>
+              <button type="button" class="btn btn-outline-danger">Track Package</button>
+            </li>
+            <li class="progtrckr-todo">
+              <span>Delivered</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-
-</div> -->
-<div class="cart-container">
-  <app-filters [durationTypes]="durationTypes" (filter)="filter($event)"></app-filters>
-  <div class="item-container" *ngFor=" let order of orderHistoryResponse?.orderList?.order">
-    <div class="item">
-      <div class="header">
-        <div>
-          <span class="block label">Order Date:</span>
-          <span class="block value">{{order.orderDate}}</span>
-        </div>
-        <div>
-          <span class="block label">Order Id:</span>
-          <span class="block value">{{order.orderIdentifier.identificationIdentifier}}</span>
-        </div>
-        <div>
-          <span class="block label">Total: </span>
-          <span class="block value">${{order.orderTotalAmount }}</span>
-        </div>
-        <span class="order-details">Order details &#x261E;</span>
-      </div>
-      <div class="body">
-        <ng-container *ngIf="order.orderCode !== 'Prescription'">
-          <div class="product-block inline-block" *ngFor="let details of order.details">
-            <div class="image">
-              <img src="{{details.itemImageUrl}}" alt="" width="100px" height="100px">
-            </div>
-            <div>{{details.brand}}</div>
+  <!-- Third card -->
+  <!-- <div class="card subscription-order os-history-details mb-3">
+    <div class="card-header">
+      <div class="row">
+        <div class="card-header-left-content col-sm-7">
+          <div class="os-details">
+            <span class="mr-1">Order Date:</span>
+            <span>
+              <strong>May 18,2018</strong>
+            </span>
           </div>
-        </ng-container>
-        <ng-container *ngIf="order.orderCode === 'Prescription'">
-          <div class="product-block inline-block">
-            <div class="image">
-            </div>
-            <div>Prescription Order</div>
+          <div class="os-details">
+            <span class="mr-1">Order#:</span>
+            <span>
+              <strong>160082321</strong>
+            </span>
           </div>
-        </ng-container>
-        <div class="delivery-block inline-block">
-          <div *ngIf="order.orderStatusDescription === 'Order Placed'">
-            Delivery date will be available once your order ships.
-          </div>
-          <div *ngIf="order.orderStatusDescription === 'Delivered' && order.orderCode !== 'Prescription'">
-            Delivered
-          </div>
-          <div *ngIf="order.orderCode === 'Prescription'">
-          </div>
-          <div class="steps-container" *ngIf="order.orderStatusDescription !== 'Cancelled' && order.orderCode !== 'Prescription'">
-            <div class="steps">
-              <ul>
-                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Order Placed' || order.orderStatusDescription === 'Delivered'}">Order Placed</li>
-                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered'}">Shipped</li>
-                <li class="list" [ngClass]="{'active': order.orderStatusDescription === 'Delivered'}">Delivered</li>
-              </ul>
-            </div>
-          </div>
-          <div class="order-tracking" *ngIf=" order.orderCode !== 'Prescription' && (order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered')">
-            Track Package
+          <div class="os-details">
+            <span class="mr-1">Total:</span>
+            <span>
+              <strong>$16.25</strong>
+            </span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <app-pagination [dataSize]="56" (dataChange)="displayData($event)"></app-pagination>
+    <div class="card-body clear-fix">
+
+      <div class="row">
+        <div class="orders-list-wrapper col-md-6 col-lg-5">
+          <div class="media orders-list mb-4">
+            <img class="mr-3" src="assets/img/2.png" alt="Generic placeholder image">
+            <div class="media-body">
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5 offset-lg-2">
+          <div class="pb-4">
+            <h5>Subscribed</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- </div> -->
+  <app-pagination [dataSize]="orderHistoryResponse?.orderList?.order?.length" (dataChange)="displayData($event)"></app-pagination>
 </div>

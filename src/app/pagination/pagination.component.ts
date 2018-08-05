@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Input, Output, EventEmitter, OnChanges } from '@angular/core';
 
 @Component({
@@ -41,7 +41,7 @@ export class PaginationComponent implements OnChanges {
   }
   goToPage(index) {
     this.currentPage = index + 1;
-    this.dataChange.emit({currentPage: this.currentPage});
+    this.dataChange.emit({ currentPage: this.currentPage });
   }
 
   left() {

@@ -1,5 +1,4 @@
-import { Component, OnChanges } from '@angular/core';
-import { Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -10,13 +9,14 @@ export class FiltersComponent implements OnChanges {
   @Input()
   durationTypes;
   @Output()
-  filter = new EventEmitter<any>();
+  filter = new EventEmitter<any>(true);
   durationType;
   orderType;
   constructor() {
     this.orderType = 'Active';
     this.durationType = 'Past 1 month';
   }
+
 
   ngOnChanges() {
     console.log(this.durationTypes);

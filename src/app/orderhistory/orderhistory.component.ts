@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, AfterContentChecked, ChangeDetectorRef } from '@angular/core';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-orderhistory',
   templateUrl: './orderhistory.component.html',
   styleUrls: ['./orderhistory.component.css']
 })
-export class OrderhistoryComponent implements OnInit {
+export class OrderhistoryComponent implements OnInit, AfterContentChecked {
   contentLoading = true;
   noOrderDetail = false;
   serviceFailMessage = false;
@@ -20,11 +20,30 @@ export class OrderhistoryComponent implements OnInit {
   durationType;
   durationTypes = ['Past 1 month', 'Past 3 months', 'Past year'];
   pageSizeOptions = ['10', '20', '30', '40', 'Show all items'];
+  filterType = 'Active';
+  constructor(
+    private api: ApiService,
+    private cdr: ChangeDetectorRef
+  ) {
+  }
 
-  constructor(private http: HttpClient) {
-    this.http.get('config/details.json').subscribe((res: any) => {
+  ngOnInit() {
+    this.getData();
+  }
+
+  ngAfterContentChecked() {
+    if (this.originalObj && this.originalObj.orderList && this.originalObj.orderList.order) {
+      console.log('calling....');
+      this.filter(this.filterType);
+      this.orderHistoryResponse.orderList.order = this.orderHistoryResponse.orderList.order.slice(0, 10);
+    }
+  }
+
+  getData() {
+    this.orderHistoryResponse = { responseStatus: {}, orderList: { order: [] } };
+    this.api.getDetails().subscribe((res: any) => {
       this.detailsResponse = res;
-      this.http.get('config/data.json').subscribe((response: any) => {
+      this.api.getHistory().subscribe((response: any) => {
         this.orderHistoryResponse = response.getOrderHistoryListResponse;
         this.originalObj = JSON.parse(JSON.stringify(response.getOrderHistoryListResponse));
         this.numberOfPages = this.orderHistoryResponse.orderList.numberOfOrders;
@@ -34,39 +53,40 @@ export class OrderhistoryComponent implements OnInit {
             element.details = detail.responseMap.details.shipToHomeItemInfo.shipments[0]['items'];
             // }
           });
-          this.filter('Active');
-          this.orderHistoryResponse.orderList.order = this.originalObj.orderList.order.slice(0, 10);
         });
+
       });
     });
   }
 
-  ngOnInit() {
-
-
-  }
   filter(type) {
+    this.orderHistoryResponse.orderList.order = [];
     this.orderType = type;
+    this.filterType = type;
     if (type === 'Active') {
       this.orderHistoryResponse.orderList.order =
         this.originalObj.orderList.order.filter(
           ord => ord.orderStatusDescription === 'Shipped' || ord.orderStatusDescription === 'Order Placed'
         );
+
     } else if (type === 'Product') {
       this.orderHistoryResponse.orderList.order =
         this.originalObj.orderList.order.filter(
           ord => ord.orderCode === 'Non Prescription'
         );
+
     } else if (type === 'Rx') {
       this.orderHistoryResponse.orderList.order =
         this.originalObj.orderList.order.filter(
           ord => ord.orderCode === 'Prescription'
         );
+
     } else {
       this.orderHistoryResponse.orderList.order =
         this.originalObj.orderList.order.filter(
           ord => ord.orderStatusDescription === type
         );
+
     }
     if (this.orderHistoryResponse && this.orderHistoryResponse.orderList && this.orderHistoryResponse.orderList.order) {
       this.orderHistoryResponse.orderList.order.forEach(order => {
@@ -76,7 +96,9 @@ export class OrderhistoryComponent implements OnInit {
           });
         }
       });
+
     }
+
   }
 
   goToPage(i) {
@@ -95,14 +117,13 @@ export class OrderhistoryComponent implements OnInit {
   }
 
   displayData(event) {
-    if ( event.currentPage) {
+    if (event.currentPage) {
       this.goToPage(event.currentPage);
     } else {
       this.itemsPerPageCount = event.size;
       if (this.orderHistoryResponse && this.orderHistoryResponse.orderList && this.orderHistoryResponse.orderList.order) {
         this.orderHistoryResponse.orderList.order = this.originalObj.orderList.order.slice(0, event.size);
       }
-
     }
   }
 }

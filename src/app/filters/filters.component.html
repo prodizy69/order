@@ -1,26 +1,34 @@
-<div class="filters-container">
-  <div class="filters-input inline-block">
-    Orders Placed in:
-    <select id="durationRange" [(ngModel)]="durationType" name="durationRange">
-      <option *ngFor="let option of durationTypes ">{{option}}</option>
-    </select>
-  </div>
-  <div class="filters inline-block">
-    Filter by:
-    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Active'}" (click)="filtering('Active')">Active
-      <span></span>
+<div class="os-history-filters-wrapper mb-3">
+  <div class="form-inline">
+    <div class="os-time-period form-inline mr-4">
+      <label class="mr-2 justify-content-start">
+        <b>Select time period:</b>
+      </label>
+      <select id="durationRange" [(ngModel)]="durationType" name="durationRange">
+        <option *ngFor="let option of durationTypes ">{{option}}</option>
+      </select>
     </div>
-    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Delivered'}" (click)="filtering('Delivered')">Delivered
-      <span></span>
-    </div>
-    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Cancelled'}" (click)="filtering('Cancelled')"> Cancelled
-      <span></span>
-    </div>
-    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Product'}" (click)="filtering('Product')"> Product
-      <span></span>
-    </div>
-    <div class="filter inline-block" [ngClass]="{'active': orderType ==='Rx'}" (click)="filtering('Rx')"> Rx
-      <span></span>
+    <div class="os-history-filters-list-wrapper form-inline">
+      <label class="os-history-filters-title justify-content-start mr-2">
+        <b>Filter by:</b>
+      </label>
+      <ul class="os-history-filters-list">
+        <li class="clickable" [ngClass]="{'active': orderType ==='Active'}" (click)="filtering('Active')">
+          <a>Active</a>
+        </li>
+        <li class="clickable" [ngClass]="{'active': orderType ==='Delivered'}" (click)="filtering('Delivered')">
+          <a>Delivered</a>
+        </li>
+        <li class="clickable" [ngClass]="{'active': orderType ==='Cancelled'}" (click)="filtering('Cancelled')">
+          <a>Cancelled</a>
+        </li>
+        <li class="clickable" [ngClass]="{'active': orderType ==='Product'}" (click)="filtering('Product')">
+          <a>Product</a>
+        </li>
+        <li class="clickable" [ngClass]="{'active': orderType ==='Rx'}" (click)="filtering('Rx')">
+          <a>Rx</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
