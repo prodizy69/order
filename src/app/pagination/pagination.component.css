@@ -1,0 +1,37 @@
+.pagination {
+  display: inline-block;
+}
+
+.pagination li {
+list-style: none;
+  color: black;
+  float: left;
+  padding: 4px 10px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.pagination li.active {
+  background-color: #C00;
+  color: white;
+  border-radius: 4px;
+}
+
+.pagination li:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+li.disable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.select {
+  vertical-align: top;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-right: 15px;
+}

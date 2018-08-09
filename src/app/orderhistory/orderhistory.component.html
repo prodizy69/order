@@ -42,7 +42,6 @@
       </div>
     </div>
     <div class="card-body clear-fix">
-
       <div class="row">
         <div class="orders-list-wrapper col-md-6 col-lg-5">
           <h6>SHIPMENT3</h6>
@@ -117,5 +116,9 @@
     </div>
   </div> -->
   <!-- </div> -->
-  <app-pagination [dataSize]="orderHistoryResponse?.orderList?.order?.length" (dataChange)="displayData($event)"></app-pagination>
+ <div class="row">
+   <div class="col-sm-12 text-right">
+    <app-pagination [dataSize]="orderHistoryResponse?.orderList?.order?.length" (dataChange)="displayData($event)"></app-pagination>
+   </div>
+ </div>
 </div>
