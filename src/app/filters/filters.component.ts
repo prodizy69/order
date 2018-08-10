@@ -8,8 +8,13 @@ import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core
 export class FiltersComponent implements OnChanges {
   @Input()
   durationTypes;
+
   @Output()
   filter = new EventEmitter<any>(true);
+
+  @Input()
+  config;
+
   durationType;
   orderType;
   constructor() {
@@ -19,6 +24,7 @@ export class FiltersComponent implements OnChanges {
 
 
   ngOnChanges() {
+    console.log(this.config);
     console.log(this.durationTypes);
   }
   filtering(type) {

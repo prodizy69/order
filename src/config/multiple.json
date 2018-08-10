@@ -1,371 +1,333 @@
-{
-  "responseMap": {
-    "details": {
-      "shipToHomeItemInfo": {
-        "items": [
-          {
-            "rewardProgress": "N",
-            "weight": "1.19LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 1,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 3.85,
-            "salePrice": 5.29,
-            "selectedShipSaveOption": "",
-            "offer": "20% off sitewide",
-            "detailedUnitPrice": "5.29",
-            "size": "20.00OZ",
-            "upcNumber": "5042827747",
-            "listPrice": 5.29,
-            "skuId": "148863",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "CVS Health Baby Oil With Aloe Vera And Vitamin E, 20 OZ",
-            "quantity": 1,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "0",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "1.44"
-            }
-          },
-          {
-            "rewardProgress": "E",
-            "weight": "1.80LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 1,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 7.62,
-            "salePrice": 10.49,
-            "selectedShipSaveOption": "",
-            "offer": "20% off sitewide",
-            "detailedUnitPrice": "10.49",
-            "size": "25.00OZ",
-            "upcNumber": "5042815433",
-            "listPrice": 10.49,
-            "skuId": "699289",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "CVS Muscle Relief Mineral Bath Salts, 24.99 OZ",
-            "quantity": 1,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "0",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "2.87"
-            }
-          },
-          {
-            "rewardProgress": "N",
-            "weight": "0.42LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 1,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 10.54,
-            "salePrice": 14.49,
-            "selectedShipSaveOption": "",
-            "offer": "20% off sitewide",
-            "detailedUnitPrice": "14.49",
-            "size": "4.00OZ",
-            "upcNumber": "89611600110",
-            "listPrice": 14.49,
-            "skuId": "430981",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "Sambucol Original Syrup, 4 OZ",
-            "quantity": 1,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "0",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "3.95"
-            }
-          },
-          {
-            "rewardProgress": "N",
-            "weight": "1.51LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 1,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 23.54,
-            "salePrice": 10.79,
-            "selectedShipSaveOption": "",
-            "offer": "20% off sitewide",
-            "detailedUnitPrice": "32.37",
-            "size": "20.00OZ",
-            "upcNumber": "5042845009",
-            "listPrice": 10.79,
-            "skuId": "441617",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "CVS Gold Emblem Lightly Fancy Whole Cashews, Sea Salt",
-            "quantity": 3,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "0",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "8.83"
-            }
-          },
-          {
-            "rewardProgress": "E",
-            "weight": "1.48LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 1,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 5.81,
-            "salePrice": 7.99,
-            "selectedShipSaveOption": "",
-            "offer": "20% off sitewide",
-            "detailedUnitPrice": "7.99",
-            "size": "23.70OZ",
-            "upcNumber": "38151901925",
-            "listPrice": 7.99,
-            "skuId": "349143",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "Herbal Essences Hello Hydration Moisturizing Hair Shampoo, 23.7 OZ",
-            "quantity": 1,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "0",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "2.18"
-            }
-          },
-          {
-            "rewardProgress": "E",
-            "weight": "0.36LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 1,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 26.17,
-            "salePrice": 35.99,
-            "selectedShipSaveOption": "",
-            "offer": "CVS Employee Discount",
-            "detailedUnitPrice": "35.99",
-            "size": "1.70OZ",
-            "upcNumber": "71639304610",
-            "listPrice": 35.99,
-            "skuId": "170175",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "Ck One Eau De Toilette Spray",
-            "quantity": 1,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "1",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "9.82"
-            }
-          },
-          {
-            "rewardProgress": "N",
-            "weight": "4.00LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 1,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 13.65,
-            "salePrice": 9.39,
-            "selectedShipSaveOption": "",
-            "offer": "20% off sitewide",
-            "detailedUnitPrice": "18.78",
-            "size": "50.00OZ",
-            "upcNumber": "3700013831",
-            "listPrice": 9.39,
-            "skuId": "395454",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "Tide Febreze Spring & Renewal Laundry Detergent",
-            "quantity": 2,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "0",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "5.13"
-            }
-          },
-          {
-            "rewardProgress": "N",
-            "weight": "0.53LBS",
-            "itemSurchargeAmount": 0.0,
-            "fsaEligibleFlag": "0",
-            "freeShippingFlag": 0,
-            "isArApplied": "0",
-            "webOnlyFlag": "0",
-            "itemRemoved": "0",
-            "itemTotal": 8.72,
-            "salePrice": 11.99,
-            "selectedShipSaveOption": "",
-            "offer": "20% off sitewide",
-            "detailedUnitPrice": "11.99",
-            "size": "",
-            "upcNumber": "1291477390",
-            "listPrice": 11.99,
-            "skuId": "536936",
-            "reviewEligibility": "0",
-            "itemImageUrl": "",
-            "seoSlug": "",
-            "brand": "Summer Infant Cradler Adjustable Head Support",
-            "quantity": 1,
-            "shipTrackNbr": "",
-            "shipHazardFlag": "0",
-            "savingsApplied": "Y",
-            "itemSavings": {
-              "savings": "3.27"
-            }
-          }
-        ]
-      },
-      "personalInfo": {
-        "lastName": "Kumar",
-        "addr1": "",
-        "phoneNumber": "401-454-5545",
-        "addr2": "",
-        "zipCode": "",
-        "state": "",
-        "preferredContactMethod": "EMAIL",
-        "firstName": "Jitender",
-        "city": ""
-      },
-      "orderPriceSummary": {
-        "ecrewardsAmount": 0.0,
-        "total": 105.25,
-        "shippingAmount": 0.0,
-        "appeasementAmount": 0.0,
-        "taxAmount": 5.35,
-        "subTotal": 99.9,
-        "fsaeligibleamount": 0.0,
-        "employeeDiscountAmount": 7.2
-      },
-      "state": "In process",
-      "billingInfo": {
-        "cards": [
-          {
-            "paymentInfo": {
-              "paymentAmount": 105.25,
-              "paymentType": "Credit Card",
-              "last4Digits": "2205",
-              "creditCardType": "MasterCard",
-              "expirationMonth": "12",
-              "expirationYear": "2018"
-            },
-            "billingAddress": {
-              "lastName": "Kumar",
-              "addr1": "9 Portland street",
-              "addr2": "",
-              "zipCode": "02838",
-              "state": "RI",
-              "firstName": "Jitender",
-              "city": "Manville"
-            }
-          }
-        ]
-      },
-      "externalId": "30146008",
-      "shippingInfo": {
-        "storeAddress": {
-          "lastName": "",
-          "selectedStoreInfo": {
-            "storeState": "",
-            "storeZip": "",
-            "storeAddress1": "",
-            "storeCity": "",
-            "storeId": ""
-          },
-          "phoneNumber": "",
-          "pickUpLocation": "",
-          "receiveSmsFlag": "N",
-          "emailAddress": "",
-          "firstName": ""
-        },
-        "shippingMethod": {
-          "shipDesc": ""
-        },
-        "shippingAddress": {
-          "lastName": "Kumar",
-          "addr1": "9 Portland street",
-          "phoneNumber": "123-456-7890",
-          "addr2": "",
-          "email": "jitender.verma@cvshealth.com",
-          "zipCode": "02838",
-          "state": "RI",
-          "firstName": "Jitender",
-          "city": "Manville"
-        }
-      },
-      "statusMessage": "Success",
-      "statusCode": "00",
-      "shipToStoreItemInfo": {
-        "items": []
-      },
-      "submittedDate": "06/11/2018",
-      "totalItemCount": 8,
-      "appliedPromotions": {
-        "ecSavingsDollarOffAmnt": 0.0,
-        "totalSavings": 37.49,
-        "discountDetails": [
-          {
-            "desc": "20% off sitewide",
-            "discount": "20.29"
-          },
-          {
-            "desc": "SB Free Shipping at $25 Test",
-            "discount": "0.00"
-          },
-          {
-            "desc": "$10 Off $20",
-            "discount": "10.00"
-          }
-        ]
-      },
-      "orderId": "o293287003",
-      "inProgressRewards": [],
-      "earnedRewards": [
+//Scenario-1: 1 Shipment & 1 item
+
+"shipToHomeItemInfo": {
+  "shipments": [
+    {
+      "trackingDetails": [
         {
-          "rewardDesc": "CNE_$5 off _EB",
-          "ptsQty": "50.0",
-          "ptsToNextThreshldQty": "0.00",
-          "firstThreshLimNbr": "50.00",
-          "offerLimitReachedInd": "false",
-          "cmpgnId": "39148",
-          "dealType": "BCR",
-          "rewardAmount": "3",
-          "thrshldTypeCd": "D"
+          "shipTrackNbr": "1Z308A9X0110671637",
+          "shipTrackCarrier": "UPS",
+          "DeliveryDate": "",
+          "DeliveryStatus": "Shipped",
+          "ItemID":"237014"
         }
-      ],
-      "returnItems": {},
-      "ecCouponInfo": {
-        "ecCardNo": "4871017277015"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237014",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
       }
     }
-  }
+  ]
+}
+
+//Scenario-2: Multiple Shipments for 1 item
+
+"shipToHomeItemInfo": {
+  "shipments": [
+    {
+      "trackingDetails": [
+        {
+          "shipTrackNbr": "1Z308A9X0110671637",
+          "shipTrackCarrier": "UPS",
+          "DeliveryDate": "",
+          "DeliveryStatus": "Shipped",
+          "ItemID":"237014"
+        },
+        {
+          "shipTrackNbr": "1Z308A9X0110671638",
+          "shipTrackCarrier": "UPS",
+          "DeliveryDate": "",
+          "DeliveryStatus": "Delivered",
+          "ItemID":"237014"
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237014",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
+      }
+    }
+  ]
+}
+
+//Scenario-3: 1 Shipment & multiple items
+
+"shipToHomeItemInfo": {
+  "shipments": [
+    {
+      "trackingDetails": [
+        {
+          "shipTrackNbr": "1Z308A9X0110671637",
+          "shipTrackCarrier": "UPS",
+          "DeliveryDate": "",
+          "DeliveryStatus": "Shipped",
+          "ItemID":["237014", "237015"]
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237014",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
+      }
+    },
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237015",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
+      }
+    }
+  ]
+}
+
+//Scenario-4: Multiple Shipments & multiple items
+
+"shipToHomeItemInfo": {
+  "shipments": [
+    {
+      "trackingDetails": [
+        {
+          "shipTrackNbr": "1Z308A9X0110671637",
+          "shipTrackCarrier": "UPS",
+          "DeliveryDate": "",
+          "DeliveryStatus": "Shipped",
+          "ItemID":["237014", "237015"]
+        },
+        {
+          "shipTrackNbr": "1Z308A9X0110671638",
+          "shipTrackCarrier": "UPS",
+          "DeliveryDate": "",
+          "DeliveryStatus": "Shipped",
+          "ItemID":["237014", "237015"]
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237014",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
+      }
+    },
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237015",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
+      }
+    },
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237014",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
+      }
+    },
+    {
+      "rewardProgress": "N",
+      "weight": "1.07LBS",
+      "itemSurchargeAmount": 0,
+      "fsaEligibleFlag": "0",
+      "freeShippingFlag": 1,
+      "isArApplied": "0",
+      "webOnlyFlag": "",
+      "itemRemoved": "0",
+      "itemTotal": 27.8,
+      "salePrice": 44.99,
+      "selectedShipSaveOption": "",
+      "offer": "",
+      "detailedUnitPrice": "44.99",
+      "size": "4.50OZ",
+      "upcNumber": "71639307178",
+      "listPrice": 44.99,
+      "skuId": "237015",
+      "reviewEligibility": "0",
+      "itemImageUrl": "",
+      "seoSlug": "",
+      "brand": "Tommy Hilfiger Tommy Cologne Spray",
+      "quantity": 1,
+      "shipTrackNbr": "1Z2EY1881397487981",
+      "shipHazardFlag": "0",
+      "savingsApplied": "N",
+      "itemSavings": {
+        "savings": ""
+      }
+    }
+  ]
 }

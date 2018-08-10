@@ -1,13 +1,12 @@
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class HttpService {
-  constructor(private http: HttpClient) {
+  constructor(private http: Http) {
 
   }
-
   request(options: any): Observable<any> {
     const url = options.url;
     if (options.method === 'post') {

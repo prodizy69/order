@@ -14,19 +14,19 @@
       </label>
       <ul class="os-history-filters-list">
         <li class="clickable" [ngClass]="{'active': orderType ==='Active'}" (click)="filtering('Active')">
-          <a>Active</a>
+          <a>Active {{config?.active}}</a>
         </li>
         <li class="clickable" [ngClass]="{'active': orderType ==='Delivered'}" (click)="filtering('Delivered')">
-          <a>Delivered</a>
+          <a>Delivered {{config?.delivered}}</a>
         </li>
         <li class="clickable" [ngClass]="{'active': orderType ==='Cancelled'}" (click)="filtering('Cancelled')">
-          <a>Cancelled</a>
+          <a>Cancelled {{config?.cancelled}}</a>
         </li>
         <li class="clickable" [ngClass]="{'active': orderType ==='Product'}" (click)="filtering('Product')">
-          <a>Product</a>
+          <a>Product {{config?.product}}</a>
         </li>
         <li class="clickable" [ngClass]="{'active': orderType ==='Rx'}" (click)="filtering('Rx')">
-          <a>Rx</a>
+          <a>Rx {{config?.rx}}</a>
         </li>
       </ul>
     </div>

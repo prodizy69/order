@@ -3,7 +3,7 @@ import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
@@ -24,7 +24,7 @@ import { ApiService } from './services/api.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpModule
   ],
   providers: [ApiService, HttpService],
   bootstrap: [AppComponent]
