@@ -276,3 +276,7 @@ ul.progtrckr li.progtrckr-todo:before {
 			min-width: 150px;
 	}
 }
+.alert-primary {
+	color: #004085;
+	background-color: #EAF7F9;
+}

@@ -4,8 +4,8 @@
       <label class="mr-2 justify-content-start">
         <b>Select time period:</b>
       </label>
-      <select id="durationRange" [(ngModel)]="durationType" name="durationRange">
-        <option *ngFor="let option of durationTypes ">{{option}}</option>
+      <select id="durationRange" [(ngModel)]="durationType" name="durationRange" (ngModelChange)="applyFilters()">
+        <option *ngFor="let option of durationTypes " value="{{option.value}}">{{option.label}}</option>
       </select>
     </div>
     <div class="os-history-filters-list-wrapper form-inline">
@@ -13,20 +13,17 @@
         <b>Filter by:</b>
       </label>
       <ul class="os-history-filters-list">
-        <li class="clickable" [ngClass]="{'active': orderType ==='Active'}" (click)="filtering('Active')">
-          <a>Active {{config?.active}}</a>
+        <li class="clickable" [ngClass]="{'active': orderType ==='Active'}" (click)="applyFilters('Active')">
+          <a>Active</a>
         </li>
-        <li class="clickable" [ngClass]="{'active': orderType ==='Delivered'}" (click)="filtering('Delivered')">
-          <a>Delivered {{config?.delivered}}</a>
+        <li class="clickable" [ngClass]="{'active': orderType ==='Delivered'}" (click)="applyFilters('Delivered')">
+          <a>Delivered </a>
         </li>
-        <li class="clickable" [ngClass]="{'active': orderType ==='Cancelled'}" (click)="filtering('Cancelled')">
-          <a>Cancelled {{config?.cancelled}}</a>
+        <li class="clickable" [ngClass]="{'active': orderType ==='Cancelled'}" (click)="applyFilters('Cancelled')">
+          <a>Cancelled </a>
         </li>
-        <li class="clickable" [ngClass]="{'active': orderType ==='Product'}" (click)="filtering('Product')">
-          <a>Product {{config?.product}}</a>
-        </li>
-        <li class="clickable" [ngClass]="{'active': orderType ==='Rx'}" (click)="filtering('Rx')">
-          <a>Rx {{config?.rx}}</a>
+        <li class="clickable" [ngClass]="{'active': orderType ==='CarePass'}" (click)="applyFilters('CarePass')">
+          <a>CarePass </a>
         </li>
       </ul>
     </div>

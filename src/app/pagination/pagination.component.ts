@@ -26,6 +26,7 @@ export class PaginationComponent implements OnChanges {
 
   ngOnChanges() {
     if (this.dataSize) {
+      console.log('dataSize', this.dataSize);
       this.noOfPages = Math.ceil(this.dataSize / this.pageSize);
       this.pagination = new Array(this.noOfPages);
       this.dataChange.emit({ size: this.pageSize });

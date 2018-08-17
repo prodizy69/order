@@ -10,7 +10,7 @@ import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
 import { FiltersComponent } from './filters/filters.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ApiService } from './services/api.service';
-
+import { MomentModule } from 'angular2-moment/moment.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { ApiService } from './services/api.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    MomentModule
   ],
   providers: [ApiService, HttpService],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
 //Scenario-1: 1 Shipment & 1 item
-
 "shipToHomeItemInfo": {
   "shipments": [
     {
@@ -9,7 +8,7 @@
           "shipTrackCarrier": "UPS",
           "DeliveryDate": "",
           "DeliveryStatus": "Shipped",
-          "ItemID":"237014"
+          "ItemID": "237014"
         }
       ]
     }
@@ -47,9 +46,7 @@
     }
   ]
 }
-
 //Scenario-2: Multiple Shipments for 1 item
-
 "shipToHomeItemInfo": {
   "shipments": [
     {
@@ -59,14 +56,15 @@
           "shipTrackCarrier": "UPS",
           "DeliveryDate": "",
           "DeliveryStatus": "Shipped",
-          "ItemID":"237014"
+          "ItemID": "237014",
+          "items": []
         },
         {
           "shipTrackNbr": "1Z308A9X0110671638",
           "shipTrackCarrier": "UPS",
           "DeliveryDate": "",
           "DeliveryStatus": "Delivered",
-          "ItemID":"237014"
+          "ItemID": "237014"
         }
       ]
     }
@@ -104,9 +102,7 @@
     }
   ]
 }
-
 //Scenario-3: 1 Shipment & multiple items
-
 "shipToHomeItemInfo": {
   "shipments": [
     {
@@ -116,7 +112,10 @@
           "shipTrackCarrier": "UPS",
           "DeliveryDate": "",
           "DeliveryStatus": "Shipped",
-          "ItemID":["237014", "237015"]
+          "ItemID": [
+            "237014",
+            "237015"
+          ]
         }
       ]
     }
@@ -184,9 +183,7 @@
     }
   ]
 }
-
 //Scenario-4: Multiple Shipments & multiple items
-
 "shipToHomeItemInfo": {
   "shipments": [
     {
@@ -196,14 +193,20 @@
           "shipTrackCarrier": "UPS",
           "DeliveryDate": "",
           "DeliveryStatus": "Shipped",
-          "ItemID":["237014", "237015"]
+          "ItemID": [
+            "237014",
+            "237015"
+          ]
         },
         {
           "shipTrackNbr": "1Z308A9X0110671638",
           "shipTrackCarrier": "UPS",
           "DeliveryDate": "",
           "DeliveryStatus": "Shipped",
-          "ItemID":["237014", "237015"]
+          "ItemID": [
+            "237014",
+            "237015"
+          ]
         }
       ]
     }

@@ -7,7 +7,7 @@
         book.
       </p>
     </div>
-    <app-filters [durationTypes]="durationTypes" (filter)="filter($event)" [config]="countConfig"></app-filters>
+    <app-filters [durationTypes]="durationTypes" (filter)="filter($event)"></app-filters>
   </div>
   <!-- <div *ngIf="orderHistoryResponse?.orderList?.order?.length"> -->
   <div class="card order-card os-history-details mb-3" [ngClass]="{'order-card': order?.orderCode !== 'Prescription', 'prescription-order': order?.orderCode === 'Prescription'}"
@@ -42,44 +42,64 @@
       </div>
     </div>
     <div class="card-body clear-fix">
-      <div class="row">
-        <div class="orders-list-wrapper col-md-6 col-lg-5">
-          <!-- <h6>SHIPMENT3</h6> -->
-          <div class="media orders-list mb-4" *ngFor="let details of order.details">
-            <img class="mr-3" src="{{details.itemImageUrl}}" alt="Generic placeholder image">
+      <div class="row" *ngFor="let details of order?.details; let ind = index">
+        <div class="orders-list-wrapper col-md-6 col-lg-5" >
+          <h6 *ngIf="order.orderCode !== 'Prescription' && order.CarePass !== true">SHIPMENT{{ind+1}}</h6>
+          <ng-container *ngFor="let data of details.items;">
+          <div class="media orders-list mb-4" *ngIf="order.CarePass !== true">
+            <img class="mr-3" src="{{data.itemImageUrl}}" alt="Generic placeholder image" >
             <div class="media-body">
-              {{details.brand}}
+              {{data.brand}}
             </div>
           </div>
+          <div class="media orders-list mb-4" *ngIf="order.CarePass === true">
+            <img class="mr-3" src="{{data.itemImageUrl}}" alt="Generic placeholder image" >
+            <div class="media-body">
+              Carepass annual memmbership
+            </div>
+          </div>
+        </ng-container>
         </div>
-        <div class="orders-track-info col-md-6 col-lg-5 offset-lg-2">
-          <div class="pb-4" *ngIf="order.orderStatusDescription === 'Order Placed'">Delivery date will be availabela once your items ship</div>
-          <div class="pb-4" *ngIf="order.orderStatusDescription === 'Delivered'">
+        <div class="orders-track-info col-md-6 col-lg-5 offset-lg-2" *ngIf="details?.DeliveryStatus && order.CarePass !== true">
+          <div class="pb-4" *ngIf="details.DeliveryStatus === 'Order Placed'">Delivery date will be availabela once your items ship</div>
+          <div class="pb-4" *ngIf="details.DeliveryStatus === 'Delivered'">
             <strong>Delivered Aug.1,2018 </strong>
           </div>
-          <div class="pb-4" *ngIf="order.orderStatusDescription === 'Shipped'">
+          <div class="pb-4" *ngIf="details.DeliveryStatus === 'Shipped'">
             <strong>Estimated Delivery Date Aug.1,2018 </strong>
           </div>
           <div *ngIf="order.orderCode === 'Prescription'">
           </div>
-          <ul class="progtrckr" data-progtrckr-steps="5" *ngIf="order.orderStatusDescription !== 'Cancelled' && order.orderCode !== 'Prescription'">
-            <li [ngClass]="{'progtrckr-done active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Order Placed' || order.orderStatusDescription === 'Delivered', 'progtrckr-todo':!(order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Order Placed' || order.orderStatusDescription === 'Delivered')}">
+          <ul class="progtrckr" data-progtrckr-steps="5" *ngIf="details.DeliveryStatus !== 'Cancelled' && order.orderCode !== 'Prescription'">
+            <li [ngClass]="{'progtrckr-done active': details.DeliveryStatus === 'Shipped' || details.DeliveryStatus === 'Order Placed' || details.DeliveryStatus === 'Delivered', 'progtrckr-todo':!(details.DeliveryStatus === 'Shipped' || details.DeliveryStatus === 'Order Placed' || details.DeliveryStatus === 'Delivered')}">
               <span>Order Placed</span>
             </li>
-            <li class="track-order-btn" [ngClass]="{' progtrckr-done active': order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered', 'progtrckr-todo':!(order.orderStatusDescription === 'Shipped' || order.orderStatusDescription === 'Delivered')}">
-              <!-- <strong *ngIf="order.orderStatusDescription === 'Delivered'">Delivered Aug.1,2018 </strong> -->
+            <li class="track-order-btn" [ngClass]="{' progtrckr-done active': details.DeliveryStatus === 'Shipped' || details.DeliveryStatus === 'Delivered', 'progtrckr-todo':!(details.DeliveryStatus === 'Shipped' || details.DeliveryStatus === 'Delivered')}">
+              <!-- <strong *ngIf="details.DeliveryStatus === 'Delivered'">Delivered Aug.1,2018 </strong> -->
               <span>Shipped</span>
               <button type="button" class="btn btn-outline-danger">Track Package</button>
             </li>
-            <li [ngClass]="{'progtrckr-done active': order.orderStatusDescription === 'Delivered', 'progtrckr-todo': order.orderStatusDescription !== 'Delivered'}">
+            <li [ngClass]="{'progtrckr-done active': details.DeliveryStatus === 'Delivered', 'progtrckr-todo': details.DeliveryStatus !== 'Delivered'}">
               <span>Delivered</span>
             </li>
           </ul>
         </div>
+        <div class="orders-track-info col-md-6 col-lg-5 offset-lg-2" *ngIf="order.CarePass === true">
+          <div class="pb-4" >Enrolled</div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="alert alert-primary d-flex" role="alert" *ngIf="!orderHistoryResponse?.orderList?.order?.length">
+    <div class="list-inline-item">
+      <i class="fas fa-info-circle"></i>
+    </div>
+    <div class="list-inline-item">
+      No results <br>
+      You have no orders in the time period selected
+    </div>
+  </div>
+  <div class="row" *ngIf="orderHistoryResponse?.orderList?.order?.length">
     <div class="col-sm-12 text-right">
       <app-pagination [dataSize]="itemsCount" (dataChange)="displayData($event)"></app-pagination>
     </div>
