@@ -1,3 +1,40 @@
+.os-history-filters-wrapper .os-time-period{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+.os-history-filters-wrapper .os-time-period label{
+	max-width: 90px;
+	width: 100%;
+}
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-title{
+	margin-right: 10px;
+}  
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list{
+padding: 0;
+margin: 0;
+display: inline-block;
+}
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li{ 
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 20px;
+padding: 2px 15px;
+}
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li a{
+color: #333;
+	text-decoration: none;
+}
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li.active,
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li:hover {
+background-color: #CC0000;
+	border: 1px solid #CC0000;
+}
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li.active a,
+.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li:hover a{
+color: #FFFFFF;
+}
 .clickable {
   cursor: pointer;
 }

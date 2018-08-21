@@ -1,5 +1,7 @@
+import { UtilityService } from './../services/utility.service';
 import { Component, OnInit, AfterContentChecked, ChangeDetectorRef } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import { trackingUrls } from './order-history.constants';
 
 @Component({
   selector: 'app-orderhistory',
@@ -22,17 +24,25 @@ export class OrderhistoryComponent implements OnInit, AfterContentChecked {
   { label: 'Past 6 months', value: 6 }, { label: 'Past 12 months', value: 12 }];
   pageSizeOptions = ['10', '20', '30', '40', 'Show all items'];
   filterType = 'Active';
+  countConfig: any;
   itemsCount: number;
+  showSpinner = false;
+  trackingUrls = trackingUrls;
   constructor(
     private api: ApiService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private utilityService: UtilityService
   ) {
     this.getData();
   }
 
   ngOnInit() {
+    console.log(this.utilityService.CONFIG.microservices.history.url);
+    //this._sendTag('pageLoad');
+
 
   }
+
 
   ngAfterContentChecked() {
     if (this.originalObj && this.originalObj.orderList && this.originalObj.orderList.order) {
@@ -47,15 +57,15 @@ export class OrderhistoryComponent implements OnInit, AfterContentChecked {
     this.api.getDetails().subscribe((res: any) => {
       this.detailsResponse = res.json();
       this.api.getHistory().subscribe((response: any) => {
-        this.orderHistoryResponse = response.json().getOrderHistoryListResponse;
-        this.originalObj = JSON.parse(JSON.stringify(response.json().getOrderHistoryListResponse));
+        const data = response.json();
+        this.orderHistoryResponse = data.getOrderHistoryListResponse;
+        this.originalObj = response.json().getOrderHistoryListResponse;
         this.numberOfPages = this.orderHistoryResponse.orderList.numberOfOrders;
       });
     });
   }
 
   filter(type) {
-    console.log('type', type);
     this.orderHistoryResponse.orderList.order = [];
     this.orderType = type.type;
     this.filterType = type.type;
@@ -151,4 +161,39 @@ export class OrderhistoryComponent implements OnInit, AfterContentChecked {
       }
     }
   }
+
+  goToDetails(id) {
+    if (id) {
+      const url =
+        'https://www-qa3.cvs.com/account/order-status-and-history.jsp?itemsrange=' + this.itemsPerPageCount + '&viewall=all&duration=3#/' + id;
+      window.open(url, '_self');
+    }
+  }
+
+  goToWebsite(data) {
+    console.log('url', window.location.hostname + data.seoSlug);
+    window.open(window.location.hostname + data.seoSlug, '_blank');
+  }
+
+  // private _sendTag(tagType) {
+  //       this.fieldErrorArray = this.alertLink.length > 0 ? [...this.alertLink] : [];
+  //       const sections = this._tagService.getSubSections();
+  //       if (tagType === 'pageLoad') {
+  //           this._tagService.view(null, {
+  //               page_name: 'order status and history',
+  //                 });
+  //       } else if (tagType === 'continue' && this.showAddPayment) {
+
+  //           this._tagService.link(null, {
+  //               link_name: 'custom:order status and history: order details'
+  //           });
+  //       }
+  //       else if (tagType == 'continue') {
+  //           this._tagService.link(null, {
+  //               link_name: 'custom:order status and history: track package'
+  //               });
+  //       }
+
+  //   }
+
 }

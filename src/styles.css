@@ -1,281 +1,97 @@
 body{
+	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-}
-.order-status-history-wrapper .form-control,
-.order-status-history-wrapper .card{
-	border-radius: 0px;
-}
-.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list{
-padding: 0;
-margin: 0;
-display: inline-block;
-}
-.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li{ 
-display: inline-block;
-border: 1px solid #D0CDC7;
-border-radius: 20px;
-padding: 2px 15px;
-}
-.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li a{
-color: #75746E;
-	text-decoration: none;
-}
-.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li.active{
-background-color: #E60002;
-}
-.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li.active a{
-color:#FFFFFF;
-}
-.os-history-details .os-details{
-display: inline-block;
-margin-right: 20px;
-}
-.os-history-details .os-details span{
-display: block;
-}
-
-.card-header-right-content{
-color: #E90004;
-	display:  flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-.fa-angle-right{
-margin-left: 10px;
-font-size:30px;
-}
-.orders-list-wrapper .orders-list img{
-max-width:80px;
-}
-/*.orders-list-wrapper .orders-list{
-padding-bottom: 25px;
-}*/
-
-/*Order Tracker*/
-.orders-track-info{
-	padding-bottom: 60px;
-}
-ul.progtrckr {
+	line-height: 1.5;
 	margin: 0;
-	padding: 0 0 0 30px;
-	list-style-type: none;
-	display: flex;
+	padding: 0;
 }
 
-ul.progtrckr li {
-	position: relative;
-	text-align: center;
-	line-height: 3.5em;
-	float: left;
-	width: 40%;
+/*Global Paddings*/
+:focus {
+	outline: -webkit-focus-ring-color auto 0px;
 }
-ul.progtrckr li span{
-position: absolute;
-	color: #808080;
-}
-ul.progtrckr li:nth-child(1) span{
-left: -30px;
-}
-ul.progtrckr li:nth-child(2) span{
-left: -15px;
-}
-ul.progtrckr li:last-child span{
-left: -25px;
-}
-ul.progtrckr li:last-child{
-width: 0;
-}
-ul.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
-ul.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
-ul.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
-
-ul.progtrckr li.progtrckr-done {    
-	border-top: 2px solid #CC0000;
-	color: #E8E8E8;
-}
-ul.progtrckr li.progtrckr-done.active{
-font-weight: bold;
-border-top: 2px solid #E8E8E8;
-}
-ul.progtrckr li.progtrckr-done.active span{
-	color: #CC0000;
-}
-ul.progtrckr li .btn{
-display: none;
-}
-ul.progtrckr li.progtrckr-done.active.track-order-btn .btn{
+/*Buttons*/
+.btn{
+	padding: 8px 15px;
 	display: inline-block;
-	position: absolute;
-	left: -121%;
-	top: 50px;
+	cursor: pointer;
+}
+.btn-outline-danger{
 	border: 2px solid #CC0000;
-	font-weight: bold;
-	border-radius: 0;
+	color: #CC0000;
+	background-color: transparent;
 }
-ul.progtrckr li.progtrckr-done.active.track-order-btn .btn:hover,
-ul.progtrckr li.progtrckr-done.active.track-order-btn .btn:focus{
-background-color:#CC0000; 
-}
-ul.progtrckr li.progtrckr-todo {
-	color: silver; 
-	border-top: 2px solid #E8E8E8;
-}
-
-/*ul.progtrckr li:after {
-	content: "\00a0\00a0";
-}*/
-ul.progtrckr li:before {
-	position: relative;
-	top: 0em;
-	float: left;
-	line-height: 1em;
-}
-ul.progtrckr li.progtrckr-done:before {
-	content: "\2713";
-	color: white;
+.btn-outline-danger:hover{
 	background-color: #CC0000;
-	height: 2em;
-	width: 2em;
-	line-height: 2em;
-	border: none;
-	border-radius: 2.2em;
-	top: -18px;    
-	left: 0;
+	color: white;
 }
-ul.progtrckr li.progtrckr-todo:before {
-	content: " ";
-	color: silver;
-	background-color: #E8E8E8;
-	font-size: 2.2em;
-	top: -10px;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-}
+/*heading*/
+h1, h2, h3, h4, h5, h6{ margin: 0 0 15px 0; padding: 0; line-height: 1; }
+h1{ font-size: 2.143em; }
+h2{ font-size: 1.714em; }
+h3{ font-size: 1.429em; }
+h4{ font-size: 1.143em; }
+h5{ font-size: 1em; }
+h6{ font-size: 0.857em; }
 
-.card-header.prescription-order-active{
-	background-color: #E9F0F3;
-	padding-left: 40px;
-}
 
-#prescription-order-strip {
-	position: absolute;
-	left:-25px;
-	top:-12px;
-}
-#prescription-order-strip::before,
-#prescription-order-strip::after {
-	content: '';
-	position: absolute;
-	
-	border-color: transparent;
-	border-style: solid;
-}
-#prescription-order-strip::before {
-	border-width: 2em;
-	border-left-color:#037092;
-	border-top-color: #037092;
-}
+.pt-5{ padding-top: 5px; }
+.pt-10{ padding-top: 10px; }
+.pt-15{ padding-top: 15px; }
+.pt-20{ padding-top: 10px; }
+.pt-25{ padding-top: 25px;}
+.pt-30{ padding-top: 30px; }
 
-#prescription-order-strip::after {
-	border-radius: 0.4em;
-	border-width: 1.35em;
-	border-left-color:#037092;
-	border-top-color: #037092;
-}
-.prescription-order-active  i{
-	color:white;
-	position: absolute;
-	left:-15px;
-	top:-4px;
-	font-size: 18px;
-}
-/* Responsiveness */
-@media (max-width: 990px){
-	.container{
-			max-width: 100%;
-	}
-}
-@media (max-width: 880px){
-	.os-history-filters-wrapper > .form-inline{
-			align-items: start;
-	}
-	.os-history-filters-wrapper .os-time-period,
-	.os-history-filters-wrapper .os-history-filters-list-wrapper{
-			flex-direction: column;
-			align-items: stretch;
-	}
-	.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list{
-			margin-top: 7px;
-	}
-}
-@media (max-width: 767px){
-	.os-history-filters-wrapper > .form-inline{
-			flex-direction: column;
-			align-items: stretch;
-	}
-	.os-history-filters-wrapper .os-time-period{
-			margin-bottom: 20px;
-	}
-	ul.progtrckr li.progtrckr-done.active.track-order-btn .btn{
-		 left: -113%; 
-	}
-	.os-history-filters-wrapper .os-history-filters-list-wrapper .os-history-filters-list li{
-			margin-bottom: 5px;
-	}
-}
-@media (max-width: 576px){
-	.os-history-filters-wrapper .os-time-period{
-			margin-right: 0 !important;
-	}
-	.os-history-details .card-header-right-content{
-			display: none;
-	}
-	.os-history-details .os-details {
-			display: flex;
-	}
-	.orders-list-wrapper .orders-list img {
-			max-width: 60px;
-	}
-	ul.progtrckr{
-			flex-direction: column; 
-	}
-	ul.progtrckr li.progtrckr-done{
-			border-left: 2px solid #CC0000;
-			border-top: 0!important;
-			min-height: 65px;
-	}
-	ul.progtrckr li.progtrckr-done.active.track-order-btn .btn {
-			left: -28px;
-			bottom: -70px;
-			top: auto;
-	}
-	ul.progtrckr li.progtrckr-done.active{
-			border-top: 0px solid #E8E8E8;
-			border-left: 2px solid #E8E8E8;
-	}
-	ul.progtrckr li.progtrckr-done:before{
-			top: -5px;
-			left: -14px;
-	}
-	ul.progtrckr li.progtrckr-todo:before{
-			left: -6px;
-	}
-	ul.progtrckr li:nth-child(2) span,
-	ul.progtrckr li:nth-child(1) span {
-			left: 25px!important;
-			top: -15px;
-			width: 100%;
-			text-align: left;
-			min-width: 150px;
-	}
-	ul.progtrckr li:last-child span {
-			left: 25px;
-			bottom: -6px;
-			text-align: left;
-			min-width: 150px;
-	}
-}
+.pb-5{ padding-bottom: 5px; }
+.pb-10{ padding-bottom: 10px; }
+.pb-15{ padding-bottom: 15px; }
+.pb-20{ padding-bottom: 20px; }
+.pb-25{ padding-bottom: 25px; }
+.pb-30{ padding-bottom: 30px; }
+
+.pr-5{ padding-right: 5px; }
+.pr-10{ padding-right: 10px; }
+.pr-15{ padding-right: 15px; }
+.pr-20{ padding-right: 20px; }
+.pr-25{ padding-right: 25px; }
+.pr-30{ padding-right: 30px; }
+
+.pl-5{ padding-left:5px; }
+.pl-10{ padding-left:10px; }
+.pl-15{ padding-left:15px; }
+.pl-20{ padding-left:20px; }
+.pl-25{ padding-left:25px; }
+.pl-30{ padding-left:30px; }
+
+/*Margins*/
+.mt-5{ margin-top:5px; }
+.mt-10{ margin-top:10px; }
+.mt-15{ margin-top:15px; }
+.mt-20{ margin-top:20px; }
+.mt-25{ margin-top:25px; }
+.mt-30{ margin-top:20px; }
+
+.mb-5{ margin-bottom: 5px; }
+.mb-10{ margin-bottom: 10px; }
+.mb-15{ margin-bottom: 15px; }
+.mb-20{ margin-bottom: 20px; }
+.mb-25{ margin-bottom: 25px; }
+.mb-30{ margin-bottom: 30px; }
+
+.mr-5 { margin-right: 5px; }
+.mr-19 { margin-right: 10px; }
+.mr-15 { margin-right: 15px; }
+.mr-20 { margin-right: 20px; }
+.mr-25 { margin-right: 25px; }
+.mr-30 { margin-right: 30px; }
+
+.ml-5 { margin-left: 5px; }
+.ml-10 { margin-left: 10px; }
+.ml-15 { margin-left: 15px; }
+.ml-20 { margin-left: 20px; }
+.ml-25 { margin-left: 25px; }
+.ml-30 { margin-left: 30px; }
+
 .alert-primary {
 	color: #004085;
 	background-color: #EAF7F9;

@@ -10,7 +10,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014"
                   ]
@@ -172,7 +172,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014"
                   ]
@@ -334,7 +334,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -344,7 +344,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -537,7 +537,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -547,7 +547,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -740,7 +740,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": "237015"
                 }
               ],
@@ -900,7 +900,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": "237015"
                 }
               ],
@@ -1060,7 +1060,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": "237014"
                 }
               ],
@@ -1372,7 +1372,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -1382,7 +1382,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -1635,7 +1635,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -1645,7 +1645,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -1898,7 +1898,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -1908,7 +1908,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2161,7 +2161,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2171,7 +2171,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2424,7 +2424,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2434,7 +2434,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2687,7 +2687,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2697,7 +2697,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2950,7 +2950,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -2960,7 +2960,7 @@
                   "shipTrackNbr": "1Z308A9X0110671638",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Delivered",
+                  "deliveryStatus": "Delivered",
                   "ItemID": [
                     "237014",
                     "237015"
@@ -3213,7 +3213,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014"
                   ]
@@ -3375,7 +3375,7 @@
                   "shipTrackNbr": "1Z308A9X0110671637",
                   "shipTrackCarrier": "UPS",
                   "DeliveryDate": "Aug 19, 2018",
-                  "DeliveryStatus": "Shipped",
+                  "deliveryStatus": "Shipped",
                   "ItemID": [
                     "237014"
                   ]

@@ -1,16 +1,16 @@
-<div class="os-history-filters-wrapper mb-3">
-  <div class="form-inline">
-    <div class="os-time-period form-inline mr-4">
-      <label class="mr-2 justify-content-start">
-        <b>Select time period:</b>
+<div class="os-history-filters-wrapper mb-15">
+  <div class="os-form-inline">
+    <div class="os-time-period mr-25">
+      <label class="mr-10">
+        <b>Time period:</b>
       </label>
       <select id="durationRange" [(ngModel)]="durationType" name="durationRange" (ngModelChange)="applyFilters()">
         <option *ngFor="let option of durationTypes " value="{{option.value}}">{{option.label}}</option>
       </select>
     </div>
-    <div class="os-history-filters-list-wrapper form-inline">
-      <label class="os-history-filters-title justify-content-start mr-2">
-        <b>Filter by:</b>
+    <div class="os-history-filters-list-wrapper os-form-inline">
+      <label class="os-history-filters-title mr-10">
+        <b>Filter by :</b>
       </label>
       <ul class="os-history-filters-list">
         <li class="clickable" [ngClass]="{'active': orderType ==='Active'}" (click)="applyFilters('Active')">
